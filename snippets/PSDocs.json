@@ -1,0 +1,38 @@
+{
+    "Document": {
+        "prefix": "document",
+        "body": [
+            "Document '${1}' {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Document definition"
+    },
+    "Section": {
+        "prefix": "section",
+        "body": [
+            "Section '${1}' {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Document section"
+    },
+    "Metadata": {
+        "prefix": "meta",
+        "body": [
+            "Metadata @{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Document metadata"
+    },
+    "Code": {
+        "prefix": "code",
+        "body": [
+            "Code {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Code block"
+    }
+}
