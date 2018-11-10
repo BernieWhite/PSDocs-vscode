@@ -1,0 +1,52 @@
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "Invoke-Build Build",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile",
+            "type": "shell",
+            "command": "npm",
+            "args": [
+                "run",
+                "compile",
+                "--loglevel",
+                "silent"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "problemMatcher": [
+                "$tsc-watch"
+            ]
+        },
+        {
+            "label": "Package",
+            "type": "shell",
+            "command": "vsce",
+            "args": [
+                "package"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Install",
+            "type": "shell",
+            "command": "code",
+            "args": [
+                "--install-extension",
+                ".\\psdocs-vscode-preview-0.0.1.vsix"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
